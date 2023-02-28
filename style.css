@@ -1,0 +1,36 @@
+*, *::before ,*::after{
+    /**makes everhying easier to style*/
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    /**remove padding and margin*/
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /**background-color:#fbdb5f;**/
+    color:#2c4a6a;
+   background-image: url('https://www.pngall.com/wp-content/uploads/9/Minions-Frame.png');
+   background-size: cover;
+
+}
+
+.ans-grid{
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    gap:10px;
+    margin: 20px 0;
+
+}
+
+.btn{
+    border:2px solid ;
+    padding: 5px 10px;
+    color:#2c4a6a;
+    font-size: 20px; 
+}
