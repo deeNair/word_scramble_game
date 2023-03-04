@@ -20,17 +20,16 @@ const guess3 = document.querySelector('#btn3');
 const guess4 = document.querySelector('#btn4');
 const allguess=document.querySelector('.btn');
 const result=document.querySelector('#result');
-const tim=document.querySelector('#timeText');
+const timeEl=document.querySelector('#timer');
 
 let ranID;
 
 
-var TotalgameTime=1000;
 
+let time=10;
+let ref=setInterval(startTimer,1000);
+//let gameTime=time;
 function startGame(){
-    currentGameTime=TotalgameTime;
-    currentGameTime--;
-		intervalTime = setInterval(decTime, 10);
 
 console.log("game started");
 quesCont.style.display="grid";
@@ -38,6 +37,10 @@ continu.style.display="flex";
 firstPg.style.display="none";
 start.style.display="none";
 tryAgain.style.display="flex";
+//setInterval(startTimer,1000);
+//startTimer();
+
+
 nextQuestion();
 }
 
@@ -60,12 +63,42 @@ function decTime(){
 }
 intervalTime = setInterval(decTime, 10);
 **/
+function startTimer(){
+    //time=10;
 
+    timeEl.innerHTML="Timer "+time;
+    time--;
+    //console.log(ref);
+
+    if(time<=0){
+        timeEl.innerHTML="times up";
+        //clearInterval(ref);
+    
+    }
+    else{
+       // console.log("im her");
+      //time=10;
+        //setInterval(startTimer,1000);
+//timeEl.innerHTML=10;
+
+continu.addEventListener('click',function(){
+    time=10;
+})
+
+
+    }
+
+   
+  
+}
 
 
 
 function nextQuestion(){
 //var randomID = Math.floor(Math.random() * questions.length)
+
+//let gameTime=time;
+//setInterval(startTimer,1000);
  ranID = Math.floor(Math.random() * questions.length);
 
 questList1.innerHTML = questions[ranID].quest;
@@ -73,9 +106,13 @@ guess1.textContent = questions[ranID].guess1;
     guess2.textContent = questions[ranID].guess2;
     guess3.textContent = questions[ranID].guess3;
     guess4.textContent = questions[ranID].guess4;
-    currentGameTime = gameTimeMode;
-		intervalTime = setInterval(decTime, 10);
- 
+   clearInterval(ref);
+   //timeEl.innerHTML="resetting";
+   //time=setInterval(startTimer,1000);
+   ref=setInterval(startTimer,1000);
+   //time=ref;
+   //clearInterval(ref);
+   //ref=setInterval(startTimer,1000);
 }
 
 
@@ -105,13 +142,17 @@ function myGuess1() {
         //h2a.innerHTML = "<h1>HEYYY Right Answer!!! NOW I UNDERSTAND</h1>";
 
         result.textContent=" you got that right ";
-        
+        clearInterval(ref);
+        timeEl.innerHTML="you win";
 
     }
     else {
         //ans.style.display = "none";
        // h2a.innerHTML = "<h1>BZZZZ....Wrong Answer ,I DON'T GET IT</h1>";
        result.textContent=" you got that wrong ";
+
+       clearInterval(ref);
+       timeEl.innerHTML="you lose";
     }
 }
 
@@ -119,13 +160,16 @@ function myGuess2() {
     if (guess2.textContent === questions[ranID].ans) {
         //ans.style.display = "none";
         result.innerHTML = "<h1>Right Answer</h1>";
-
+        clearInterval(ref);
+   timeEl.innerHTML="you win";
+       
     }
     else {
 
         //ans.style.display = "none";
         result.innerHTML = "<h1>Wrong Answer</h1>";
-
+        clearInterval(ref);
+       timeEl.innerHTML="you lose";
     }
 }
 
@@ -133,12 +177,16 @@ function myGuess3() {
     if (guess3.textContent === questions[ranID].ans) {
         //ans.style.display = "none";
         result.innerHTML = "<h1>Right Answer</h1>";
-
+        clearInterval(ref);
+   timeEl.innerHTML="you win";
+       
     }
     else {
 
         //ans.style.display = "none";
         result.innerHTML = "<h1>Wrong Answer</h1>";
+        clearInterval(ref);
+       timeEl.innerHTML="you lose";
 
     }
 }
@@ -146,16 +194,20 @@ function myGuess4() {
     if (guess4.textContent === questions[ranID].ans) {
         //ans.style.display = "none";
     result.innerHTML = "<h1>Right Answer</h1>";
+    clearInterval(ref);
+    timeEl.innerHTML="you win";
 
     }
     else {
         //ans.style.display = "none";
         result.innerHTML = "<h1>Wrong Answer</h1>";
+        clearInterval(ref);
+       timeEl.innerHTML="you lose";
 
     }
 }
-continu.addEventListener('click',startGame);
-
+continu.addEventListener('click',nextQuestion);
+//continu.addEventListener('click',startTimer);
 
 const questions = [{
     quest: "AMERICA",

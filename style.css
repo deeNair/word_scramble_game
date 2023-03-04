@@ -56,3 +56,11 @@ body{
     display: flex;
 }
 
+.mainquest_container{
+  width:800px;
+  max-width:80%;
+  background-color: antiquewhite;
+  border-radius: 5px;
+
+
+}
