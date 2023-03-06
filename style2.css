@@ -1,0 +1,235 @@
+*, *::before ,*::after{
+    /**makes everhying easier to style*/
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+body{
+    /**remove padding and margin*/
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color:#fbdb5f;
+    color:#2c4a6a;
+    
+
+   /** background-image:url(/image/minion4.jpg);
+   
+    background-size:contain;
+   
+    background-size:1440px 800px;
+    background-size:cover;
+   background-repeat: no-repeat;*/
+   background-image: url(./image/minion55.jpeg);
+ background-size: 100% 50%;
+ background-repeat:no-repeat;
+ 
+}
+
+
+
+
+.ans-grid{
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    gap:50px;
+    margin: 20px 0;
+   
+}
+
+.btn{
+    margin-top:10px;
+    border-radius:20px ;
+    box-shadow: 0 0 5px 2px;
+    padding: 15px 10px;
+    color:#fbdb5f;
+    font-size: 20px; 
+    font-family: 'Slackey', cursive;
+    cursor:pointer;
+    background: #2c4a6a;
+   
+    
+}
+.btn:hover{
+    background:buttonface;
+    color:#2c4a6a;
+    padding: 15px 10px;
+}
+
+
+#questList{
+    margin-left:250px;
+    font-size: 50px;
+    /*font-family: 'Fredoka One', cursive;*/
+    font-family: 'Rubik Gemstones', cursive;
+    /*font-family: 'Slackey', cursive;*/
+
+}
+
+#timer{
+   margin-left: 550px;
+    font-family: 'Rye', cursive;
+   font-size:20px;
+}
+.Score{
+    font-family: 'Rye', cursive;
+    font-size:20px;
+    margin-left: 10px;
+}
+.flex_parent{
+   display: flex;
+   
+}
+#result{
+    font-family: 'Rubik Gemstones', cursive;
+    font-size: 50px;
+    margin:50px;
+}
+
+h1 {
+    
+    font-family: 'Slackey', cursive;
+    
+   font-size: 75px;
+    
+    /*font-family: 'Rampart One', cursive;
+    font-family: 'Bungee Shade', cursive;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Patua One', cursive;
+    font-family: 'Rubik Gemstones', cursive;
+    font-family: 'Rye', cursive;
+    font-family: 'Slackey', cursive;*/
+    
+    }
+    
+    #intro h1{
+        font-family: 'Slackey', cursive;
+        font-size: 40px;
+    }
+
+    
+
+   .heading{
+    margin-top: 40%;
+        font-family: 'Rampart One', cursive;
+        font-size:100px;
+    }
+    .heading2{
+        font-family: 'Rubik Gemstones', cursive;
+        font-size: 50px;
+    }
+    .heading3{
+        font-family: 'Rampart One', cursive;
+        font-size: 50px;
+    }
+
+.strt{
+    border-radius:20px ;
+    box-shadow: 0 0 5px 2px;
+    font-family: 'Slackey', cursive;
+    padding: 20px 20px;
+    color:#2c4a6a;
+    font-size: 20px; 
+}
+
+.cont,.try{
+
+    border-radius:20px ;
+    box-shadow: 0 0 5px 2px;
+    font-family: 'Slackey', cursive;
+    padding: 2px 10px;
+    color:#fbdb5f;
+    font-size: 20px; 
+    background: #2c4a6a;
+
+}
+.cont:hover{
+    background-color:buttonface;
+    color:#2c4a6a;
+
+
+}
+
+.try:hover{
+    background-color:buttonface;
+    color:#2c4a6a;
+ 
+}
+.next-question{
+    display:flex;
+    gap:300px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+/*#btn1{
+    margin-top: 20px;
+
+}
+#btn2{
+  margin-top:20px;
+}
+
+#btn3{
+    margin-top:20px;
+}
+#btn4{
+    margin-left:20px;
+}
+
+
+#ques-container{
+   border-radius:2px solid;
+}*/
+
+
+.mainquest_container{
+    margin-top: 200px;
+  display: none;
+  background-color:#fbdb5f;
+ width:1000px;
+ max-width:80%;
+  border-radius: 30px;
+  padding: 15px 10px;
+  box-shadow: 0 0 10px 2px;
+  border:#2c4a6a 15px solid;
+  
+}
+.mainquest_container{
+    border-radius: 4px;
+    /* #1 */
+   /* border: 5px solid hsl(0, 0%, 40%);*/
+    
+    /* #2 */
+    padding: 5px;
+    /*background: hsl(0, 0%, 20%);*/
+    border-radius: 30px;
+    /* #3 
+    outline: 5px solid hsl(0, 0%, 60%); */
+    
+    /* #4 AND INFINITY!!! (CSS3 only) */
+    box-shadow:
+    
+        /*0 0 0px 10px #fbdb5f,*/
+        0 0 0px 20px buttonface,
+        0 0 0px 25px whitesmoke,
+        0 0 10px 30px buttonface
+    
+}
+.gif{
+    /**background-image: url(./image/transgif.gif);
+    background-repeat:no-repeat;*/
+   display:none;
+    margin-top: 400px;
+}
+
+.footer{
+    margin-top: 50px;
+    background-color:buttonface;
+    padding: 20px;
+}

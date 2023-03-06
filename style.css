@@ -54,13 +54,16 @@ body{
 
 .next-question{
     display: flex;
+   
 }
 
-.mainquest_container{
-  width:800px;
-  max-width:80%;
-  background-color: antiquewhite;
-  border-radius: 5px;
-
-
+#ques-container{
+   
+   background-color: antiquewhite;
+   border-radius:2px solid;
 }
+.cont,.try{
+
+     
+}
+

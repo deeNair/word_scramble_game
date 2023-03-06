@@ -4,11 +4,13 @@ quesCont.style.display="none";
 
 const continu=document.querySelector('.cont');
 continu.style.display="none";
+const mainquestContEL=document.querySelector('.mainquest_container');
+const nextquestEL=document.querySelector('.next-question');
+//nextquestEL.style.display='none';
 
 const tryAgain=document.querySelector('.try');
 tryAgain.style.display="none";
-
-const firstPg=document.querySelector('.firstpage');
+//tryAgain.addEventListener('click',startGame);
 
 const start=document.querySelector('.strt');
 start.addEventListener('click',startGame)
@@ -21,6 +23,8 @@ const guess4 = document.querySelector('#btn4');
 const allguess=document.querySelector('.btn');
 const result=document.querySelector('#result');
 const timeEl=document.querySelector('#timer');
+const ansGrid=document.querySelector('.ans-grid');
+const firstPg=document.querySelector('.firstpage');
 
 let ranID;
 
@@ -40,7 +44,7 @@ tryAgain.style.display="flex";
 //setInterval(startTimer,1000);
 //startTimer();
 
-
+mainquestContEL.style.display='grid';
 nextQuestion();
 }
 
@@ -96,7 +100,8 @@ continu.addEventListener('click',function(){
 
 function nextQuestion(){
 //var randomID = Math.floor(Math.random() * questions.length)
-
+ansGrid.style.display='grid';
+result.style.display='none';
 //let gameTime=time;
 //setInterval(startTimer,1000);
  ranID = Math.floor(Math.random() * questions.length);
@@ -140,16 +145,19 @@ function myGuess1() {
     if (guess1.textContent === questions[ranID].ans) {
         //ans.style.display = "none";
         //h2a.innerHTML = "<h1>HEYYY Right Answer!!! NOW I UNDERSTAND</h1>";
-
-        result.textContent=" you got that right ";
+       
+        //result.textContent=" you got that right ";
+        result.innerHTML="Right Answer";
         clearInterval(ref);
         timeEl.innerHTML="you win";
-
+        ansGrid.style.display='none';
+        result.style.display='grid';
     }
     else {
-        //ans.style.display = "none";
+        ansGrid.style.display='none';
+        result.style.display='grid';
        // h2a.innerHTML = "<h1>BZZZZ....Wrong Answer ,I DON'T GET IT</h1>";
-       result.textContent=" you got that wrong ";
+       result.innerHTML=" <h1>you got that wrong ,the right answer is</h1> " + questions[ranID].ans;
 
        clearInterval(ref);
        timeEl.innerHTML="you lose";
@@ -162,6 +170,8 @@ function myGuess2() {
         result.innerHTML = "<h1>Right Answer</h1>";
         clearInterval(ref);
    timeEl.innerHTML="you win";
+   ansGrid.style.display='none';
+        result.style.display='grid';
        
     }
     else {
@@ -170,6 +180,8 @@ function myGuess2() {
         result.innerHTML = "<h1>Wrong Answer</h1>";
         clearInterval(ref);
        timeEl.innerHTML="you lose";
+       ansGrid.style.display='none';
+       result.style.display='grid';
     }
 }
 
@@ -179,6 +191,8 @@ function myGuess3() {
         result.innerHTML = "<h1>Right Answer</h1>";
         clearInterval(ref);
    timeEl.innerHTML="you win";
+   ansGrid.style.display='none';
+   result.style.display='grid';
        
     }
     else {
@@ -187,6 +201,8 @@ function myGuess3() {
         result.innerHTML = "<h1>Wrong Answer</h1>";
         clearInterval(ref);
        timeEl.innerHTML="you lose";
+       ansGrid.style.display='none';
+       result.style.display='grid';
 
     }
 }
@@ -196,6 +212,8 @@ function myGuess4() {
     result.innerHTML = "<h1>Right Answer</h1>";
     clearInterval(ref);
     timeEl.innerHTML="you win";
+    ansGrid.style.display='none';
+    result.style.display='grid';
 
     }
     else {
@@ -203,6 +221,8 @@ function myGuess4() {
         result.innerHTML = "<h1>Wrong Answer</h1>";
         clearInterval(ref);
        timeEl.innerHTML="you lose";
+       ansGrid.style.display='none';
+       result.style.display='grid';
 
     }
 }
