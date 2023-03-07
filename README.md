@@ -1,12 +1,19 @@
 # Word_Scramble_Game
 # Table of Contents
 # About The Project
-<p>Its a modified version of world scramble with a minion theme , where you help the minions to find the write scrambled word.</p>
-<h1>Built With</h1>
-<p>HTML</P><P>CSS</P><p>Vanilla Javascript</p>
-<h1> Getting Started</h1>
+Its a modified version of world scramble with a minion theme , where you help the minions to find the write scrambled word.
+## Built With
+ 
 
-Prerequisites
+ ![Alt text](https://img.shields.io/badge/html5-%23E34F26.svg?style%3Dfor-the-badge%26logo%3Dhtml5%26logoColor%3Dwhite)
+
+
+![Alt text](https://img.shields.io/badge/css3-%231572B6.svg?style%3Dfor-the-badge%26logo%3Dcss3%26logoColor%3Dwhite)
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3D%23F7DF1E)
+
+# Getting Started
+
 # Installation
 To get a local copy of the code, clone it using git in your local terminal:
 
@@ -48,7 +55,7 @@ Screenshot_3:
 
 
 # PseudoCode
-1. consists of an array of objects called questions which holds objects in key value pair ,with each object holding 6 keys and values that consists of word,guess1,guess2,guess3,guess4 and the right answer with corresponding values.
+1.consists of an array of objects called questions which holds objects in key value pair ,with each object holding 6 keys and values that consists of word,guess1,guess2,guess3,guess4 and the right answer with corresponding values.
 
 2.startGame() function that calls the nextQuestion() function and displays the quiz container.
 
@@ -93,3 +100,5 @@ https://www.youtube.com/watch?v=riDzcEQbX6k
 https://www.soundboard.com/sb/minions
 
 https://fonts.google.com
+
+[def]: https://img.shields.io/badge/javascript-%23323330.svg?style%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3D%23F7DF1E
