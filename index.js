@@ -55,6 +55,7 @@ tryAgain.style.display="flex";
 ansGrid.style.display='grid';
 gify.style.display='flex';
 mainquestContEL.style.display='grid';
+result.style.display='grid';
 nextQuestion();
 
 }
@@ -89,7 +90,7 @@ function startTimer(){
         timeEl.innerHTML="times up";
 ansGrid.style.display='none';
 result.style.display='grid';
-result.innerHTML="<h1>You Lose</h1>";
+result.innerHTML="<h1>Times UP !!</h1>";
 //soundIncorrect.play();
         //clearInterval(ref);
     
@@ -164,7 +165,7 @@ function myGuess1() {
         //result.textContent=" you got that right ";
         result.innerHTML="<h1>Right Answer</h1>";
         clearInterval(ref);
-        timeEl.innerHTML="you win";
+        timeEl.innerHTML="yEAHH";
         ansGrid.style.display='none';
         result.style.display='grid';
         soundCorrect.play();
@@ -179,7 +180,7 @@ function myGuess1() {
        result.innerHTML="The Right Answer is " + questions[ranID].ans;
 
        clearInterval(ref);
-       timeEl.innerHTML="you lose";
+       timeEl.innerHTML="oh N0";
        soundIncorrect.play();
        Score.innerHTML="Score "+score;
     }
@@ -190,7 +191,7 @@ function myGuess2() {
         //ans.style.display = "none";
         result.innerHTML = "<h1>Right Answer</h1>";
         clearInterval(ref);
-   timeEl.innerHTML="you win";
+   timeEl.innerHTML="yEAHH";
    ansGrid.style.display='none';
         result.style.display='grid';
        soundCorrect.play();
@@ -200,7 +201,7 @@ function myGuess2() {
     else {
         result.innerHTML = "<h1>Wrong Answer</h1>";
         clearInterval(ref);
-       timeEl.innerHTML="you lose";
+       timeEl.innerHTML="oh N0";
        ansGrid.style.display='none';
        result.style.display='grid';
        soundIncorrect.play();
@@ -213,7 +214,7 @@ function myGuess3() {
         //ans.style.display = "none";
         result.innerHTML = "<h1>Right Answer</h1>";
         clearInterval(ref);
-   timeEl.innerHTML="you win";
+   timeEl.innerHTML="yEAHH";
    ansGrid.style.display='none';
    result.style.display='grid';
        soundCorrect.play();
@@ -225,7 +226,7 @@ function myGuess3() {
         //ans.style.display = "none";
         result.innerHTML = "<h1>Wrong Answer</h1>";
         clearInterval(ref);
-       timeEl.innerHTML="you lose";
+       timeEl.innerHTML="oh N0";
        ansGrid.style.display='none';
        result.style.display='grid';
        soundIncorrect.play();
@@ -238,7 +239,7 @@ function myGuess4() {
         //ans.style.display = "none";
     result.innerHTML = "<h1>Right Answer</h1>";
     clearInterval(ref);
-    timeEl.innerHTML="you win";
+    timeEl.innerHTML="yEAHH";
     ansGrid.style.display='none';
     result.style.display='grid';
  soundCorrect.play();
@@ -249,7 +250,7 @@ function myGuess4() {
         //ans.style.display = "none";
         result.innerHTML = "<h1>Wrong Answer</h1>";
         clearInterval(ref);
-       timeEl.innerHTML="you lose";
+       timeEl.innerHTML="oh N0";
        ansGrid.style.display='none';
        result.style.display='grid';
        soundIncorrect.play();
@@ -278,7 +279,7 @@ guess1.textContent = questions[ranID].guess1;
    //timeEl.innerHTML="resetting";
    //time=setInterval(startTimer,1000);
    ref=setInterval(startTimer,1000);
-   Score.innerHTML="Score"+score;
+   Score.innerHTML="Score "+score;
 
 });
 
@@ -298,5 +299,20 @@ const questions = [{
     guess3: "WBZMIEBB",
     guess4: "BZIAIBWM",
     ans: "WEBAZIBM"
+},{
+    quest: "WALES",
+	guess1: "SBWLE",
+    guess2: "WESEL",
+    guess3: "SWEAL",
+    guess4: "SWSLA",
+	ans: "SWEAL"
+},{
+    quest: "RUSSIA",
+    guess1: "ISIRAS",
+    guess2: "RUIASS",
+    guess3: "SUSIRU",
+    guess4: "TISSAU",
+	ans: "RUIASS"
+
 }
 ];

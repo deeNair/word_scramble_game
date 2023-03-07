@@ -35,12 +35,17 @@ This project has the following features:
 1.First view has a Start Quiz button
 This invokes a startGame() function .
 Screenshot_1:
+![Screenshot](./image/pg1.png)
+
 
 2.startGame() function, gives you the second view with the quiz container that has the word to be guessed, 4 option buttons with the right scrambled word to guess, continue and try again buttons,timer ,score
-Screenshot_2
+Screenshot_2:
+![Screenshot](./image/pg2.png)
 
 3.Answers are recorded using different event listeners on the buttons, "click" which also tracks correct answers,score and restarts timer when you click next question.Also displays the result.
-Screenshot_3
+Screenshot_3:
+![Screenshot](./image/pg3.png)
+
 
 # PseudoCode
 1. consists of an array of objects called questions which holds objects in key value pair ,with each object holding 6 keys and values that consists of word,guess1,guess2,guess3,guess4 and the right answer with corresponding values.
@@ -53,9 +58,9 @@ second view .
 
 4.The question with randomId is displayed with corresponding options also this function  restarts the timer.
 
-5.The guessbutton the user clicks invokes the event listeneres myGuess1,
+5.The guess button the user clicks invokes the event listeneres myGuess1,myGuess2,myGuess3,myGuess4.
 
-6.The guesses are checked in a if else loop to match the key ans in the array questions[randomID] with random id tht was generated and result displayed invoking the corresponding dom elements.
+6.The guesses are checked in a if else loop to match the key ans in the array questions[randomID] with random id tht was generated and result is displayed invoking the corresponding dom elements.
 
 
 
@@ -72,9 +77,19 @@ Contains images and audio files.
 
 3.One Javascript Page * Contains: * Variables, including arrays with object * Event listeners * if/else statements  * Functions * 
 
-# References
+# Future Enhancements:
+ -Implement a function that provides users with 3 chances to guess the right word but before timer runs out.
+ -Implement different levels.
+ -Implement bigger variety of words.
 
-Contributing
-License
-Contact
-Acknowledgments
+# License
+Distributed under the MIT License. See LICENSE.txt for more information.
+
+# Acknowledgments
+https://www.codingnepalweb.com/word-scramble-game-html-javascript/
+
+https://www.youtube.com/watch?v=riDzcEQbX6k
+
+https://www.soundboard.com/sb/minions
+
+https://fonts.google.com
