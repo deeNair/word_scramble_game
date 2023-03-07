@@ -219,10 +219,10 @@ h1 {
     /* #4 AND INFINITY!!! (CSS3 only) */
     box-shadow:
     
-        /*0 0 0px 10px #fbdb5f,*/
-        0 0 0px 20px #c9c2bb,
+        /*0 0 0px 10px ,*/
+        0 0 0px 20px #2596be,
         0 0 0px 25px whitesmoke,
-        0 0 10px 30px #c9c2bb
+        0 0 10px 30px #2596be
     
 }
 .gif{

@@ -90,7 +90,7 @@ function startTimer(){
         timeEl.innerHTML="times up";
 ansGrid.style.display='none';
 result.style.display='grid';
-result.innerHTML="<h1>Times UP !!</h1>";
+result.innerHTML="<h1>You Lose !!</h1>";
 //soundIncorrect.play();
         //clearInterval(ref);
     
@@ -177,7 +177,7 @@ function myGuess1() {
         result.style.display='grid';
        // h2a.innerHTML = "<h1>BZZZZ....Wrong Answer ,I DON'T GET IT</h1>";
        result.innerHTML="<h1>Wrong Answer</h1>"
-       result.innerHTML="The Right Answer is " + questions[ranID].ans;
+      // result.innerHTML="The Right Answer is " + questions[ranID].ans;
 
        clearInterval(ref);
        timeEl.innerHTML="oh N0";
